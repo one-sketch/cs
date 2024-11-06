@@ -124,8 +124,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-.week-square,
-.collapse {
+.week-square {
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
   border-radius: 20px; /* Rounded corners */
@@ -143,7 +142,28 @@ h2 {
   transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
 
 }
+.collapse{
+  background-color: var(--box-background); /* White background for boxes */
+  border: 1px solid var(--box-border); /* Light grey border */
+  border-radius: 20px; /* Rounded corners */
+  width: 200px; 
+  height: auto; /* Fixed height to make squares */
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline from links */
+  color: var(--text-color); /* Default text color */
+  box-shadow: #fff; /* Add shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
+  overflow: scroll;
+
+
+
+
+}
 .hw-s{
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
@@ -160,7 +180,6 @@ h2 {
   color: var(--text-color); /* Default text color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
   transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
-  overflow: scroll;
 
 
 }
