@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("toggle-button");
 
@@ -57,6 +56,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-    
-
