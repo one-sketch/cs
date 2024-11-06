@@ -210,10 +210,9 @@ h2 {
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
   border-radius: 20px; /* Rounded corners */
-  width: 410; /* Fixed width */
+  width: 410px; /* Fixed width */
   height: auto; /* Fixed height to make squares */
   padding-left: 15px;
-  margin-right: 30px;
 
 
   display: flex;
@@ -247,7 +246,7 @@ h2 {
 }
 
 .links:hover {
-  background-color: #ff6600; /* Change background on hover */
+  background-color: #84BD00; /* Change background on hover */
 }
 
 .inside-rec11 {
