@@ -33,26 +33,90 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("toggle-button");
 
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode'); // Apply dark mode
-        toggleButton.textContent = "Light Mode"; // Update button text
-    } else {
-        toggleButton.textContent = "Dark Mode"; // Reset button text
-    }
 
-    toggleButton.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode"); // Toggle dark mode class
-        if (document.body.classList.contains("dark-mode")) {
-            localStorage.setItem('theme', 'dark'); // Save dark mode preference
-            toggleButton.textContent = "Light Mode"; // Update button text
+
+// Create a theme manager module
+const ThemeManager = {
+    // Initialize theme management
+    init() {
+        this.toggleButton = document.getElementById("toggle-button");
+        this.setupTheme();
+        this.setupEventListeners();
+    },
+
+    // Apply the saved theme or default theme
+    setupTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            this.enableDarkMode();
         } else {
-            localStorage.setItem('theme', 'light'); // Save light mode preference
-            toggleButton.textContent = "Dark Mode"; // Reset button text
+            this.disableDarkMode();
         }
-    });
-});
+    },
+
+    // Setup event listeners
+    setupEventListeners() {
+        if (this.toggleButton) {
+            this.toggleButton.addEventListener("click", () => this.toggleTheme());
+        }
+    },
+
+    // Toggle between light and dark themes
+    toggleTheme() {
+        if (document.body.classList.contains("dark-mode")) {
+            this.disableDarkMode();
+        } else {
+            this.enableDarkMode();
+        }
+    },
+
+    // Enable dark mode
+    enableDarkMode() {
+        document.body.classList.add("dark-mode");
+        
+        // Update themed elements
+        const themedElements = document.querySelectorAll(
+            '.navbar, .week-square, .inside-square, .hw-s, ' +
+            '.collapse, .content, .Note, .list, .inside-rec1, ' +
+            '.inside-rec11'
+        );
+        
+        themedElements.forEach(element => {
+            element.classList.add("dark-mode");
+        });
+
+        // Update button text
+        if (this.toggleButton) {
+            this.toggleButton.textContent = "Light Mode";
+        }
+
+        localStorage.setItem('theme', 'dark');
+    },
+
+    // Disable dark mode
+    disableDarkMode() {
+        document.body.classList.remove("dark-mode");
+        
+        // Update themed elements
+        const themedElements = document.querySelectorAll(
+            '.navbar, .week-square, .inside-square, .hw-s, ' +
+            '.collapse, .content, .Note, .list, .inside-rec1, ' +
+            '.inside-rec11'
+        );
+        
+        themedElements.forEach(element => {
+            element.classList.remove("dark-mode");
+        });
+
+        // Update button text
+        if (this.toggleButton) {
+            this.toggleButton.textContent = "Dark Mode";
+        }
+
+        localStorage.setItem('theme', 'light');
+    }
+};
+
+// Initialize theme manager when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => ThemeManager.init());
