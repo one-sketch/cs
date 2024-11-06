@@ -1,0 +1,266 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8; /* Light background */
+  color: #000; /* Default text color for light mode */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Define light and dark mode colors */
+:root {
+  --background-color: #f8f8f8; /* Light background */
+  --text-color: #000; /* Default text color */
+  --navbar-background: #000; /* Dark navbar */
+  --navbar-text-color: #fff; /* Light navbar text */
+  --button-background: #ff6600; /* Orange button */
+  --box-background: #fff; /* White background for boxes */
+  --box-border: #ccc; /* Light grey border */
+}
+
+body.dark-mode {
+  --background-color: #121212; /* Dark background */
+  --text-color: #ffffff; /* Light text */
+  --navbar-background: #1f1f1f; /* Darker navbar */
+  --button-background: #ff6600; /* Keep button orange */
+  --box-background: #2c2c2c; /* Darker background for boxes */
+  --box-border: #444; /* Darker border */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--navbar-background);
+  color: var(--navbar-text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-top,
+.navbar-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  color: #ff6600; /* Orange color to make it stand out */
+  margin: 5px 0; /* Space around the title */
+  font-size: 1.6em; /* Slightly larger text size */
+  text-align: center; /* Center the title */
+  padding-bottom: 20px;
+}
+
+.navbar-links,
+.navbar-actions {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+.navbar-links li,
+.navbar-actions li {
+  padding: 0;
+  margin: 0;
+}
+
+/* Link styles */
+.navbar-links a {
+  text-decoration: none;
+  color: var(--navbar-text-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #2f231c; /* Highlight color on hover */
+}
+
+/* Button styles for navbar actions */
+.button {
+  background-color: var(--button-background); /* Orange background for buttons */
+  padding: 10px 15px;
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #e65c00; /* Darker orange on hover */
+}
+
+#toggle-button {
+  margin-left: 20px; /* Push the button to the right */
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25%; /* Adjust the width as per your requirement */
+  height: auto; /* Maintain aspect ratio */
+}
+
+h2 {
+  margin: 5px 0; /* Space around the title */
+  font-size: 1.4em; /* Slightly larger text size */
+  text-align: center; /* Center the title */
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Container for the week boxes */
+.table-container {
+  display: flex; /* Align boxes horizontally */
+  justify-content: center; /* Center the boxes horizontally */
+  gap: 20px; /* Add spacing between the boxes */
+  padding: 20px; /* Optional: add padding around the container */
+  flex-wrap: wrap;
+}
+
+.week-square,
+.inside-square,
+.hw-s,
+.collapse {
+  background-color: var(--box-background); /* White background for boxes */
+  border: 1px solid var(--box-border); /* Light grey border */
+  border-radius: 20px; /* Rounded corners */
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height to make squares */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline from links */
+  color: var(--text-color); /* Default text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
+}
+
+.week-square:hover {
+  background-color: #84BD00; /* Change background on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.week-square h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5em; /* Increase font size for the week title */
+}
+
+.links {
+  font-size: 1.6em; /* Smaller text for links */
+  text-decoration: underline;
+  text-decoration-color: orange;
+  color: var(--text-color);
+}
+
+.links:hover {
+  background-color: #ff6600; /* Change background on hover */
+}
+
+.inside-rec11 {
+  background-color: var(--box-background);
+  border: 1px solid var(--box-border);
+  border-radius: 20px; /* Rounded corners */
+  width: 800px; /* Fixed width */
+  height: 400px; /* Fixed height to make squares */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline from links */
+  color: var(--text-color); /* Default text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
+}
+
+.hw {
+  color: red;
+}
+
+.content {
+  display: none; /* Hide the content initially */
+  margin-top: 15px; /* Space above the content */
+}
+
+.collapse {
+  max-width: 800px; /* Set a max width for the content */
+  margin: 20px auto; /* Center the container */
+  padding: 20px;
+  background-color: var(--box-background); /* White background for the content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  color: #ff6600; /* Color to match your design */
+  text-decoration: underline; /* Underline to make it look clickable */
+}
+
+.collapse:hover {
+  color: #e65c00; /* Change color on hover for feedback */
+}
+
+#col,
+#task {
+  font-size: 24px; /* Font size for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.Note,
+.list {
+  font-size: 20px; /* Font size for paragraphs */
+  line-height: 1.5; /* Improve readability */
+  margin-bottom: 15px; /* Space between paragraphs */
+  text-align: left;
+  padding-left: 10px;
+  color: var(--text-color); /* Default text color */
+}
+
+.scrollable {
+  max-height: 150px; /* Fixed height for scrollable content */
+  overflow-y: auto; /* Enables vertical scrolling if content exceeds max-height */
+}
+
+/* Dark mode specific styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.navbar.dark-mode {
+  background-color: #1f1f1f; /* Darker navbar */
+}
+
+.week-square.dark-mode,
+.inside-square.dark-mode,
+.hw-s.dark-mode,
+.collapse.dark-mode {
+  background-color: #2c2c2c; /* Darker background for boxes in dark mode */
+  border: 1px solid #444; /* Darker border */
+}
+
+.content {
+  background-color: #1e1e1e; /* Dark background for content */
+  border: 1px solid #444; /* Border for better visibility */
+}
+
+.links {
+  color: #ff6600; /* Keep links orange */
+}
+
+.Note,
+.list {
+  color: #ffffff; /* Light text for notes and lists */
+}
+
+.scrollable {
+  background-color: #1e1e1e; /* Dark background for scrollable areas */
+}
