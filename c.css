@@ -107,6 +107,11 @@ h3 {
   height: auto; /* Maintain aspect ratio */
 }
 
+.ins-h2{
+  font-size: 1.9em;
+}
+
+
 h2 {
   margin: 5px 0; /* Space around the title */
   font-size: 1.4em; /* Slightly larger text size */
@@ -210,7 +215,7 @@ h2 {
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
   border-radius: 20px; /* Rounded corners */
-  width: 210px; /* Fixed width */
+  width: 400px; /* Fixed width */
   height: auto; /* Fixed height to make squares */
   padding-left: 15px;
 
