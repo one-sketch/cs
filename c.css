@@ -150,6 +150,8 @@ h2 {
   border-radius: 20px; /* Rounded corners */
   width: auto; /* Fixed width */
   height: auto; /* Fixed height to make squares */
+  padding-left: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
