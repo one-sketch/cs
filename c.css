@@ -163,7 +163,7 @@ h2 {
   color: var(--text-color); /* Default text color */
   box-shadow: #fff; /* Add shadow */
   transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
-
+  color:#e65c00;
 
 
 
@@ -284,7 +284,7 @@ h2 {
 
 
 .collapse:hover {
-  color: #e65c00; /* Change color on hover for feedback */
+  color: black; /* Change color on hover for feedback */
 }
 
 #col,
