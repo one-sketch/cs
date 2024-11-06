@@ -37,16 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("toggle-button");
 
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode'); // Apply dark mode
+        toggleButton.textContent = "Light Mode"; // Update button text
+    } else {
+        toggleButton.textContent = "Dark Mode"; // Reset button text
+    }
+
     toggleButton.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode"); // Toggle dark mode class
         if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem('theme', 'dark'); // Save dark mode preference
             toggleButton.textContent = "Light Mode"; // Update button text
         } else {
+            localStorage.setItem('theme', 'light'); // Save light mode preference
             toggleButton.textContent = "Dark Mode"; // Reset button text
         }
     });
 });
 
-    
     
 
