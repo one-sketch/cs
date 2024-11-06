@@ -148,7 +148,7 @@ h2 {
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
   border-radius: 20px; /* Rounded corners */
-  width: auto; /* Fixed width */
+  width: 400; /* Fixed width */
   height: auto; /* Fixed height to make squares */
   padding-left: 20px;
 
