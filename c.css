@@ -151,9 +151,9 @@ h2 {
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
   border-radius: 20px; /* Rounded corners */
-  width: 200px; 
+  width: 300px; 
   height: auto; /* Fixed height to make squares */
-
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
@@ -279,6 +279,7 @@ h2 {
   display: none; /* Hide the content initially */
   margin-top: 15px; /* Space above the content */
   overflow: scroll;
+  color:#000;
 }
 
 
@@ -327,8 +328,9 @@ body.dark-mode {
 }
 
 .content {
-  background-color: #1e1e1e; /* Dark background for content */
+  background-color: white; /* Dark background for content */
   border: 1px solid #444; /* Border for better visibility */
+  
 }
 
 .links {
