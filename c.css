@@ -330,16 +330,23 @@ body.dark-mode {
 .content {
   background-color: white; /* Dark background for content */
   border: 1px solid #444; /* Border for better visibility */
+
   
+}
+.content.dark-mode{
+  background-color: #1e1e1e;
 }
 
 .links {
   color: #ff6600; /* Keep links orange */
 }
-
+.Note.dark-mode,
+.list.darkmode{
+  color: white;
+}
 .Note,
 .list {
-  color: #ffffff; /* Light text for notes and lists */
+  color: black; /* Light text for notes and lists */
 }
 
 .scrollable {
