@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+        <html lang='en'>
+            <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> CS Course Page</title>
+            <link rel="stylesheet" href="c.css">
+            <link rel="stylesheet" href="dark.css">
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Silkscreen&display=swap" rel="stylesheet">
+             <script src="sc.js"></script>   
+             <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+
+            <img src="images/tech.jpg" alt="RIT CS" class="logo">
+
+        </head>
+        <body>
+            <nav class="navbar">
+                <div class="navbar-top">
+                    
+        
+        
+                    <h1>RIT Department of Computer Science</h1>
+                    
+                </div>
+                <h3>CSCI-141</h3>
+                <div class="navbar-bottom">
+                    <ul class="navbar-actions">
+                        <li><a href="index.html" class="button">HomePage</a></li>
+                        <li><a href="#" class="button">MyCourses</a></li>
+                        <li><a href="#" class="button"> Syllabus</a></li>
+                        <li><a href="#" class="button">Schedule</a></li>
+                        <li><a href="#" class="button"> Instructors</a></li>
+                        <li><a href="#" class="button"> SLIs</a></li>
+                        <li><a href="rec.html" class="button"> Recitations</a></li>
+                        
+        
+                    </ul>
+                </div>
+            </nav>
+        
+            <button id="toggle-button" class="button"> Dark Mode</button>
+
+
+        <div class="table-container">
+            <div  class="inside-square" id="NC">
+                <h2 class="ins-h2">Notes & Code</h2>
+
+                <p><a href="https://www.cs.rit.edu/~csci141/Lectures/05/Files-stu.pdf" class="links" target="_blank">Files pdf</a></p>
+                <p><a href="https://www.cs.rit.edu/~csci141/Lectures/05/Strings-stu.pdf" class="links" target="_blank">Strings pdf</a></p>
+
+
+                <p><a href="codes/find_lengths.py" class="links" download="find_lengths.py">Adder Code</a></p>
+                <p ><a href="codes/factorial.py" class="links" download="factorial.py">Factorial Code</a></p>
+                <p><a href="codes/fibonacci.py" class="links" download="fibonacci.py">Fibonacci Code</a></p>
+                <p ><a href="codes/spiral.py" class="links" download="spiral.py">Sprial Code</a></p>
+                <p ><a href="codes/factorial.py" class="links" download="factorial.py">Factorial Code</a></p>
+                <p><a href="codes/fibonacci.py" class="links" download="fibonacci.py">Fibonacci Code</a></p>
+                <p ><a href="codes/spiral.py" class="links" download="spiral.py">Sprial Code</a></p>
+                
+            </div>
+
+            <div class="hw-s" >
+                <h2 class="ins-h2">Homework 03</h2>
+                <h2 class="hw"> Due: Wednesday, September 11, 2024, 11:59 PM</h2>
+
+                <h2 class="collapse" id="col" data-bs-toggle="collapse" data-bs-target="#demo"> Important to Note</h2>
+               
+                <div id='demo' class="content">
+                    <p class="Note"><b>Use:</b> This <a href="codes/hw4.py" download="hw4.py">file</a>which contains some code for you to build on. You should implement your solutions to all three questions in this file.</p>
+                </p>
+                    <p class="Note"><b>Note:</b> You're encouraged to submit your work as you complete each question, but only your final submission will be counted. Ensure all three questions are included in that submission.</p>
+                    <p class="Note"><b>Note:</b> Once again, for this submission, some parts will not be autograded, so don't worry about the grade you get from Gradescope for turtle-based questions.
+                      
+                </div>
+                
+                <h2 class="collapse" id="task" data-bs-toggle="collapse" data-bs-target="#task-con">Task</h2>
+                <div id="task-con" class="content" class="scrollable">
+                    <ul class="list">
+                        <li><b>(30 pts)</b> Write a function draw_iter that performs the same functionality as the provided draw function, but using a while loop instead of recursion. Note that this draw function is similar to last week's homework but not the same!</li> <br>
+                        <li><b>(30 pts)</b> Write a function sum_even_squares that has one parameter n and uses a loop to add up squares of all the even numbers that are strictly less than n and return the sum. (So, for example, sum_even_squares(8) should return 56 (the sum of 2^2 + 4^2 + 6^2).) You can assume that n is at least 3.</li> <br>
+                        <li><b>(30 pts)</b> Write a function print_triangle that has one parameter n (you can assume that n is an integer). The function should print one asterisk on the first line, two asterisks on the second line, and so on, up to n asterisks on the n-th line. You can assume that n is at least 1. Note that to print something without Python adding a new line at the end, you can use a command like print(thing_to_be_printed,end="") and to simply cause a new line to be printed, you can use print().
+                        </li>
+                    </ul>
+            
+                </div>
+            </div>
+
+            <div class="lab">
+                <h2 class="ins-h2">Lab 05</h2>
+                <p><a href="https://www.cs.rit.edu/~csci141/Labs/04/Raindrops-stu.pdf" class="links" target="_blank">Raindrops Lab</a></p>
+                
+                
+            </div>
+        </div>
+       
+    </body>
+</html>
