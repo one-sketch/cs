@@ -273,9 +273,12 @@ h2 {
 
 .hw {
   color: red;
+  padding-left: 10px;
 }
 
-
+b{
+  color:#e65c00;
+}
 
 
 .collapse:hover {
@@ -336,6 +339,11 @@ body.dark-mode {
   border: 1px solid #444; /* Darker border for content */
 }
 
+
+#NC{
+  width: 430px; 
+  height: 400px; /* Set a fixed height to prevent resizing */
+}
 
 .links {
   color: #ff6600; /* Keep links orange */
