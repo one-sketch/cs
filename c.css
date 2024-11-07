@@ -275,12 +275,7 @@ h2 {
   color: red;
 }
 
-.content {
-  display: none; /* Hide the content initially */
-  margin-top: 15px; /* Space above the content */
-  overflow: scroll;
-  color:#000;
-}
+
 
 
 .collapse:hover {
@@ -328,25 +323,39 @@ body.dark-mode {
 }
 
 .content {
-  background-color: white; /* Dark background for content */
-  border: 1px solid #444; /* Border for better visibility */
+  background-color: #fff; /* Light background for content */
+  border: 1px solid #ccc; /* Light border */
+  transition: background-color 0.3s; /* Smooth transition */
+  display: none; /* Hide the content initially */
+  margin-top: 15px; /* Space above the content */
+  color:#000;
+}
 
-  
+.content.dark-mode {
+  background-color: #1e1e1e; /* Dark background for content */
+  border: 1px solid #444; /* Darker border for content */
 }
-.content.dark-mode{
-  background-color: #1e1e1e;
-}
+
 
 .links {
   color: #ff6600; /* Keep links orange */
 }
 .Note.dark-mode,
-.list.darkmode{
+.list.dark-mode{
   color: white;
+  background-color: #1e1e1e;
 }
 .Note,
 .list {
   color: black; /* Light text for notes and lists */
+}
+
+
+.list,
+.content ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 10; /* Remove default padding */
+  margin-left: 0; /* Adjust the margin as needed */
 }
 
 .scrollable {
