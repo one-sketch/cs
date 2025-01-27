@@ -1,0 +1,25 @@
+Ima Hungry
+3 Maple St.
+10.50
+False
+Lemonades 1 ThinMints 2
+Cookie Monster
+123 Sesame Street
+35.00
+True
+CaramelDeLites 3 PeanutButterPatties 4 Shortbread 2 Thanks-A-Lot 1
+Chuck Letty
+101 Chocolate World Way
+7.00
+True
+MangoCremes 2
+Juliette Gordon Low
+420 5th Avenue
+17.50
+True
+Lemonades 2 Shortbread 1 ThinMints 2
+Cookie Monster
+123 Sesame Street
+35.00
+True
+CaramelDeLites 2 Lemonades 3 PeanutButterPatties 2 ThinMints 3
