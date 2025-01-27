@@ -193,8 +193,8 @@ h2 {
   background-color: var(--box-background); /* White background for boxes */
   border: 1px solid var(--box-border); /* Light grey border */
   border-radius: 20px; /* Rounded corners */
-  width: 400px; 
-  height: auto; /* Fixed height to make squares */
+  width: 300px; 
+  height: 200px; /* Fixed height to make squares */
 
   display: flex;
   flex-direction: column;
@@ -206,8 +206,97 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
   transition: background-color 0.3s, transform 0.3s; /* Smooth background transition and scaling */
 
+}
+
+
+
+
+
+
+
+
+/* Adjust the iframe and move the other boxes out of view */
+#iframe-container {
+  display: none;
+  margin-top: 20px;
+  width: 100%;
+  padding-right: 1500px;
+  padding-top: 500px;
+}
+
+#pdf-iframe {
+  width: 800px;  /* Make iframe fill its container */
+  height: 600px;
+  border: none;
+  display: block;
+  margin-top: 10px;
+ 
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Move the lab box upwards and center it */
+.lab {
+  background-color: var(--box-background);
+  border: 1px solid var(--box-border);
+  border-radius: 20px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.lab.open {
+  /* Move the lab box upwards when the iframe opens */
+  transform: translateY(-100px); /* Adjust this value to move the box up */
 
 }
+
+/* Move the other boxes to the left and out of view */
+.hw-s.open, .inside-square.open, .week-square.open {
+  transform: translateX(-100vw); /* Move boxes out of view to the left */
+  opacity: 0; /* Optional: make the boxes invisible */
+}
+
+/* Make the other boxes return to normal when iframe is hidden */
+.hw-s, .inside-square, .week-square {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.week-square, .hw-s, .inside-square {
+  transition: margin 0.3s ease;
+}
+
+
+.table-container > div {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .inside-square{
   background-color: var(--box-background); /* White background for boxes */

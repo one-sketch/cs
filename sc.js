@@ -54,4 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
             allElements.forEach(el => el.classList.remove('dark-mode'));
         }
     });
+
+    // Toggle iframe functionality
+    window.openIframe = function() {
+        const iframeContainer = document.getElementById('iframe-container');
+        const iframe = document.getElementById('pdf-iframe');
+        const labBox = document.querySelector('.lab');
+        const otherBoxes = document.querySelectorAll('.week-square, .hw-s, .inside-square');
+        
+        if (iframeContainer.style.display === 'none' || iframeContainer.style.display === '') {
+            // Show the iframe and set the source to the PDF URL
+            iframeContainer.style.display = 'block';
+            iframe.src = "https://www.cs.rit.edu/~csci141/Recitations/10/exercise.pdf";
+            labBox.classList.add('open'); // Move the lab box upwards
+            otherBoxes.forEach(box => box.classList.add('open')); // Move other boxes out of view to the left
+        } else {
+            // Hide the iframe and clear the source
+            iframeContainer.style.display = 'none';
+            iframe.src = "";
+            labBox.classList.remove('open'); // Reset the lab box position
+            otherBoxes.forEach(box => box.classList.remove('open')); // Reset other boxes
+        }
+    };
 });
