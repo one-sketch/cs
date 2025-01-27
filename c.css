@@ -453,8 +453,9 @@ body.dark-mode {
 
 
 #NC{
-  width: 430px; 
-  height: 400px; /* Set a fixed height to prevent resizing */
+  /* width: 430px; 
+  height: 400px;  */
+  /* Set a fixed height to prevent resizing */
 }
 
 .links {
